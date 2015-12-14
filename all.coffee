@@ -178,13 +178,13 @@ calculateGrade: (html) ->
 
 letterGrade: (gradeString) ->
 	grade = Number(gradeString)
-	if grade <= 60
+	if grade < 60
 		return 'F'
-	if grade <= 70
+	if grade < 70
 		return 'D'
-	if grade <= 80
+	if grade < 80
 		return 'C'
-	if grade <= 90
+	if grade < 90
 		return 'B'
 	if grade <= 100
 		return 'A'
