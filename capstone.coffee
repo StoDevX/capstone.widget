@@ -144,12 +144,11 @@ countBadGradeDays: (html) ->
 
 calculateGrade: (html) ->
 	numberDown = @countBadGradeDays(html)
-	start = 4.0
+	start = 100
 	per = 1/15
-	for i in [0...numberDown]
-		start -= per
+	step = 10
 
-	return Number((start * 25).toFixed(2))
+	return Number(start - (per * numberDown * step)).toFixed(2)
 
 
 render: (result) ->
